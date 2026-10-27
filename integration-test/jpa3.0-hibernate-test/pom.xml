@@ -7,8 +7,8 @@
     <version>${revision}</version>
   </parent>
 
-  <artifactId>jpa-unit-jpa2.0-hibernate-integration-test</artifactId>
-  <name>JPA Unit - JPA2.0 Hibernate Integration Tests</name>
+  <artifactId>jpa-unit-jpa3.0-hibernate-integration-test</artifactId>
+  <name>JPA Unit - JPA2.1 Hibernate Integration Tests</name>
 
   <dependencies>
     <dependency>
@@ -31,17 +31,10 @@
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
-      <version>${version.hibernate4}</version>
     </dependency>
     <dependency>
       <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-entitymanager</artifactId>
-      <version>${version.hibernate4}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-ehcache</artifactId>
-      <version>${version.hibernate4}</version>
+        <artifactId>hibernate-jcache</artifactId>
     </dependency>
   </dependencies>
 </project>

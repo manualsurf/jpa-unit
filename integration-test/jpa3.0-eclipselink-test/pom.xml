@@ -7,8 +7,8 @@
     <version>${revision}</version>
   </parent>
 
-  <artifactId>jpa-unit-jpa2.0-eclipselink-integration-test</artifactId>
-  <name>JPA Unit - JPA2.0 EclipseLink Integration Tests</name>
+  <artifactId>jpa-unit-jpa3.0-eclipselink-integration-test</artifactId>
+  <name>JPA Unit - JPA2.1 EclipseLink Integration Tests</name>
 
   <dependencies>
     <dependency>
@@ -31,11 +31,12 @@
     <dependency>
       <groupId>org.eclipse.persistence</groupId>
       <artifactId>eclipselink</artifactId>
-      <version>2.4.2</version>
+      <version>2.6.4</version>
     </dependency>
     <dependency>
-      <groupId>javax.transaction</groupId>
-      <artifactId>jta</artifactId>
+      <groupId>jakarta.transaction</groupId>
+        <artifactId>jakarta.transaction-api</artifactId>
     </dependency>
   </dependencies>
+
 </project>
