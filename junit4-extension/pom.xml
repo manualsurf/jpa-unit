@@ -22,7 +22,7 @@
     
     <dependency>
       <groupId>jakarta.persistence</groupId>
-        <artifactId>jakarta.persistence-api</artifactId>
+      <artifactId>jakarta.persistence-api</artifactId>
       <optional>true</optional>
     </dependency>
     <dependency>
@@ -43,8 +43,6 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <dependency>
-      <dependency>
       <groupId>com.sun.codemodel</groupId>
       <artifactId>codemodel</artifactId>
       <scope>test</scope>

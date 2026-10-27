@@ -21,9 +21,9 @@ public class DataNucleusConfiguration extends AbstractConfiguration {
     private static final String DATANUCLEUS_CONNECTION_URL = "datanucleus.ConnectionURL";
     private static final String DATANUCLEUS_CONNECTION_PASSWORD = "datanucleus.ConnectionPassword";
     private static final String DATANUCLEUS_CONNECTION_USER_NAME = "datanucleus.ConnectionUserName";
-    private static final String JAVAX_PERSISTENCE_JDBC_URL = "javax.persistence.jdbc.url";
-    private static final String JAVAX_PERSISTENCE_JDBC_USER = "javax.persistence.jdbc.user";
-    private static final String JAVAX_PERSISTENCE_JDBC_PASSWORD = "javax.persistence.jdbc.password";
+    private static final String JAVAX_PERSISTENCE_JDBC_URL = "jakarta.persistence.jdbc.url";
+    private static final String JAVAX_PERSISTENCE_JDBC_USER = "jakarta.persistence.jdbc.user";
+    private static final String JAVAX_PERSISTENCE_JDBC_PASSWORD = "jakarta.persistence.jdbc.password";
 
     public static class ConfigurationFactoryImpl implements ConfigurationFactory {
 

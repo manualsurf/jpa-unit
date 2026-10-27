@@ -8,8 +8,8 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoMoreInteractions;
 import static org.mockito.Mockito.when;
 
-import javax.persistence.Cache;
-import javax.persistence.EntityManagerFactory;
+import jakarta.persistence.Cache;
+import jakarta.persistence.EntityManagerFactory;
 
 import org.junit.Before;
 import org.junit.Test;

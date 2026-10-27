@@ -65,8 +65,6 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <dependency>
-      <dependency>
       <groupId>org.jacoco</groupId>
       <artifactId>org.jacoco.agent</artifactId>
       <version>${version.jacoco}</version>
@@ -91,7 +89,7 @@
       <scope>test</scope>
     </dependency>
 
-        <dependency>
+    <dependency>
       <groupId>org.junit.platform</groupId>
       <artifactId>junit-platform-suite-engine</artifactId>
       <scope>test</scope>
@@ -109,7 +107,6 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <dependency>
       <groupId>org.hibernate</groupId>
         <artifactId>hibernate-jcache</artifactId>
       <scope>test</scope>
@@ -132,7 +129,7 @@
     </dependency>
     <dependency>
       <groupId>jakarta.transaction</groupId>
-        <artifactId>jakarta.transaction-api</artifactId>
+      <artifactId>jakarta.transaction-api</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>

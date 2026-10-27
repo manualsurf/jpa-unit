@@ -5,7 +5,7 @@ import static org.mockito.Mockito.verifyNoMoreInteractions;
 import static org.mockito.Mockito.verifyZeroInteractions;
 import static org.mockito.Mockito.when;
 
-import javax.persistence.EntityTransaction;
+import jakarta.persistence.EntityTransaction;
 
 import org.junit.Before;
 import org.junit.Test;

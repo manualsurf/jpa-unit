@@ -9,7 +9,7 @@ import eu.drus.jpa.unit.spi.PersistenceUnitDescriptor;
 public class DataNucleusConfiguration extends AbstractConfiguration {
 
     protected static final String DATANUCLEUS_CONNECTION_URL = "datanucleus.ConnectionURL";
-    protected static final String JAVAX_PERSISTENCE_JDBC_URL = "javax.persistence.jdbc.url";
+    protected static final String JAVAX_PERSISTENCE_JDBC_URL = "jakarta.persistence.jdbc.url";
 
     public static class ConfigurationFactoryImpl implements ConfigurationFactory {
 

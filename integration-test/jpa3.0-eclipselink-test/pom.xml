@@ -35,7 +35,7 @@
     </dependency>
     <dependency>
       <groupId>jakarta.transaction</groupId>
-        <artifactId>jakarta.transaction-api</artifactId>
+      <artifactId>jakarta.transaction-api</artifactId>
     </dependency>
   </dependencies>
 

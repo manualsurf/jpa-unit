@@ -12,7 +12,7 @@ import static org.mockito.Mockito.when;
 import java.lang.reflect.Field;
 import java.util.Optional;
 
-import javax.persistence.EntityManagerFactory;
+import jakarta.persistence.EntityManagerFactory;
 
 import org.junit.Before;
 import org.junit.Test;

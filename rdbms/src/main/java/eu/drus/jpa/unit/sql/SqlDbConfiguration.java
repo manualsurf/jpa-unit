@@ -19,14 +19,14 @@ public class SqlDbConfiguration {
     public static boolean isSupported(final PersistenceUnitDescriptor descriptor) {
         final Map<String, Object> dbConfig = descriptor.getProperties();
 
-        return dbConfig.containsKey("javax.persistence.jdbc.driver") && dbConfig.containsKey("javax.persistence.jdbc.url");
+        return dbConfig.containsKey("jakarta.persistence.jdbc.driver") && dbConfig.containsKey("jakarta.persistence.jdbc.url");
     }
 
     public DataSource createDataSource() {
-        final String driverClass = (String) dbConfig.get("javax.persistence.jdbc.driver");
-        final String connectionUrl = (String) dbConfig.get("javax.persistence.jdbc.url");
-        final String username = (String) dbConfig.get("javax.persistence.jdbc.user");
-        final String password = (String) dbConfig.get("javax.persistence.jdbc.password");
+        final String driverClass = (String) dbConfig.get("jakarta.persistence.jdbc.driver");
+        final String connectionUrl = (String) dbConfig.get("jakarta.persistence.jdbc.url");
+        final String username = (String) dbConfig.get("jakarta.persistence.jdbc.user");
+        final String password = (String) dbConfig.get("jakarta.persistence.jdbc.password");
 
         final BasicDataSource ds = new BasicDataSource();
         ds.setDriverClassName(driverClass);

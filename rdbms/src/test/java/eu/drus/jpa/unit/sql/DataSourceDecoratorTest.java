@@ -52,10 +52,10 @@ public class DataSourceDecoratorTest {
     private static Map<String, Object> createProperties() {
         final Map<String, Object> dbConfig = new HashMap<>();
 
-        dbConfig.put("javax.persistence.jdbc.driver", "driver");
-        dbConfig.put("javax.persistence.jdbc.url", "url");
-        dbConfig.put("javax.persistence.jdbc.user", "user");
-        dbConfig.put("javax.persistence.jdbc.password", "password");
+        dbConfig.put("jakarta.persistence.jdbc.driver", "driver");
+        dbConfig.put("jakarta.persistence.jdbc.url", "url");
+        dbConfig.put("jakarta.persistence.jdbc.user", "user");
+        dbConfig.put("jakarta.persistence.jdbc.password", "password");
 
         return dbConfig;
     }
@@ -136,7 +136,7 @@ public class DataSourceDecoratorTest {
     public void testUnsupportedConfiguration() {
         // GIVEN
         final Map<String, Object> props = new HashMap<>();
-        props.put("javax.persistence.jdbc.driver", "driver");
+        props.put("jakarta.persistence.jdbc.driver", "driver");
         when(descriptor.getProperties()).thenReturn(props);
 
         final DataSourceDecorator decorator = new DataSourceDecorator();

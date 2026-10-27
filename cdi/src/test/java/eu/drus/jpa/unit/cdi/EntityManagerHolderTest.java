@@ -8,7 +8,7 @@ import static org.junit.Assert.assertThat;
 
 import java.util.concurrent.CyclicBarrier;
 
-import javax.persistence.EntityManager;
+import jakarta.persistence.EntityManager;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

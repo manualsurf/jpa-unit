@@ -36,7 +36,7 @@
     <!-- TEST DEPENDENCIES -->
     <dependency>
       <groupId>jakarta.persistence</groupId>
-        <artifactId>jakarta.persistence-api</artifactId>
+      <artifactId>jakarta.persistence-api</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -50,8 +50,6 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <dependency>
-      <dependency>
       <groupId>org.jacoco</groupId>
       <artifactId>org.jacoco.agent</artifactId>
       <version>${version.jacoco}</version>
@@ -145,7 +143,7 @@
     </dependency>
     <dependency>
       <groupId>jakarta.enterprise</groupId>
-        <artifactId>jakarta.enterprise.cdi-api</artifactId>
+      <artifactId>jakarta.enterprise.cdi-api</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>

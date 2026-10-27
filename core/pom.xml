@@ -23,14 +23,12 @@
 
     <dependency>
       <groupId>jakarta.persistence</groupId>
-        <artifactId>jakarta.persistence-api</artifactId>
+      <artifactId>jakarta.persistence-api</artifactId>
       <optional>true</optional>
     </dependency>
 
     <!-- TEST DEPENDENCIES -->
     <dependency>
-      <dependency>
-      <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <scope>test</scope>

@@ -25,12 +25,12 @@
     </dependency>
     <dependency>
       <groupId>jakarta.persistence</groupId>
-        <artifactId>jakarta.persistence-api</artifactId>
+      <artifactId>jakarta.persistence-api</artifactId>
       <optional>true</optional>
     </dependency>
     <dependency>
       <groupId>jakarta.enterprise</groupId>
-        <artifactId>jakarta.enterprise.cdi-api</artifactId>
+      <artifactId>jakarta.enterprise.cdi-api</artifactId>
     </dependency>
   </dependencies>
 </project>
