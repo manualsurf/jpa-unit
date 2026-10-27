@@ -6,6 +6,7 @@ import javax.sql.DataSource;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 
+import eu.drus.jpa.unit.spi.PersistenceProperties;
 import eu.drus.jpa.unit.spi.PersistenceUnitDescriptor;
 
 public class SqlDbConfiguration {
@@ -19,14 +20,14 @@ public class SqlDbConfiguration {
     public static boolean isSupported(final PersistenceUnitDescriptor descriptor) {
         final Map<String, Object> dbConfig = descriptor.getProperties();
 
-        return dbConfig.containsKey("jakarta.persistence.jdbc.driver") && dbConfig.containsKey("jakarta.persistence.jdbc.url");
+        return PersistenceProperties.containsKey(dbConfig, "jdbc.driver") && PersistenceProperties.containsKey(dbConfig, "jdbc.url");
     }
 
     public DataSource createDataSource() {
-        final String driverClass = (String) dbConfig.get("jakarta.persistence.jdbc.driver");
-        final String connectionUrl = (String) dbConfig.get("jakarta.persistence.jdbc.url");
-        final String username = (String) dbConfig.get("jakarta.persistence.jdbc.user");
-        final String password = (String) dbConfig.get("jakarta.persistence.jdbc.password");
+        final String driverClass = (String) PersistenceProperties.get(dbConfig, "jdbc.driver");
+        final String connectionUrl = (String) PersistenceProperties.get(dbConfig, "jdbc.url");
+        final String username = (String) PersistenceProperties.get(dbConfig, "jdbc.user");
+        final String password = (String) PersistenceProperties.get(dbConfig, "jdbc.password");
 
         final BasicDataSource ds = new BasicDataSource();
         ds.setDriverClassName(driverClass);
