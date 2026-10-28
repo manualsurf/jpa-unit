@@ -3,6 +3,7 @@ package eu.drus.jpa.unit.test.model;
 import java.util.Date;
 
 import jakarta.persistence.Basic;
+import jakarta.persistence.Cacheable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -17,6 +18,7 @@ import jakarta.persistence.TemporalType;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+@Cacheable(false)
 @Entity
 @Table(name = "ACCOUNT_ENTRY")
 public class AccountEntry {

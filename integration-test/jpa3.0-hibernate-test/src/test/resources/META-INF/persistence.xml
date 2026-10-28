@@ -23,7 +23,7 @@
       <property name="hibernate.format_sql" value="true" />
 
       <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver" />
-      <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:mem:testDB" />
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:mem:testDB;NON_KEYWORDS=VALUE" />
       <property name="jakarta.persistence.jdbc.user" value="test" />
       <property name="jakarta.persistence.jdbc.password" value="test" />
     </properties>
@@ -51,7 +51,7 @@
       <property name="hibernate.format_sql" value="true" />
 
       <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver" />
-      <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:mem:testDB" />
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:mem:testDB;NON_KEYWORDS=VALUE" />
       <property name="jakarta.persistence.jdbc.user" value="test" />
       <property name="jakarta.persistence.jdbc.password" value="test" />
     </properties>
@@ -70,7 +70,7 @@
     <class>eu.drus.jpa.unit.test.model.GiroAccount</class>
     <class>eu.drus.jpa.unit.test.model.InstantAccessAccount</class>
 
-    <shared-cache-mode>ALL</shared-cache-mode>
+    <shared-cache-mode>DISABLE_SELECTIVE</shared-cache-mode>
 
     <properties>
       <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
@@ -79,13 +79,14 @@
       <property name="hibernate.format_sql" value="true" />
 
       <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver" />
-      <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:mem:testDB" />
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:mem:testDB;NON_KEYWORDS=VALUE" />
       <property name="jakarta.persistence.jdbc.user" value="test" />
       <property name="jakarta.persistence.jdbc.password" value="test" />
       
       <property name="hibernate.cache.use_second_level_cache" value="true" />
       <property name="hibernate.cache.use_query_cache" value="true" />
-      <property name="hibernate.cache.region.factory_class" value="org.hibernate.cache.ehcache.EhCacheRegionFactory" />
+      <property name="hibernate.cache.region.factory_class" value="org.hibernate.cache.jcache.JCacheRegionFactory" />
+      <property name="jakarta.persistence.sharedCache.mode" value="DISABLE_SELECTIVE" />
     </properties>
   </persistence-unit>
 </persistence>

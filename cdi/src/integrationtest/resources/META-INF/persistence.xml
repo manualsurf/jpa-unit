@@ -14,7 +14,7 @@
       <property name="hibernate.format_sql" value="true" />
 
       <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver" />
-      <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:mem:testDB" />
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:mem:testDB;DATABASE_TO_UPPER=FALSE;CASE_INSENSITIVE_IDENTIFIERS=TRUE;NON_KEYWORDS=VALUE" />
       <property name="jakarta.persistence.jdbc.user" value="test" />
       <property name="jakarta.persistence.jdbc.password" value="test" />
     </properties>

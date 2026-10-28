@@ -1,6 +1,7 @@
 package eu.drus.jpa.unit.test.model;
 
 import jakarta.persistence.Basic;
+import jakarta.persistence.Cacheable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -13,6 +14,7 @@ import jakarta.persistence.Table;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+@Cacheable(false)
 @Entity
 @Table(name = "CONTACT_DETAIL")
 public class ContactDetail {
