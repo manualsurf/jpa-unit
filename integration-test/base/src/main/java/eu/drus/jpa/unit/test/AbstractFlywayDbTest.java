@@ -31,8 +31,7 @@ public abstract class AbstractFlywayDbTest {
     @Bootstrapping
     public static void prepareDataBase(final DataSource ds) {
         // creates db schema and puts some data
-        final Flyway flyway = new Flyway();
-        flyway.setDataSource(ds);
+        final Flyway flyway = Flyway.configure().dataSource(ds).load();
         flyway.clean();
         flyway.migrate();
     }
