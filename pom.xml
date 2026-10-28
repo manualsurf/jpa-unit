@@ -118,6 +118,12 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
           <version>${plugin.version.resources}</version>
+          <configuration>
+            <nonFilteredFileExtensions>
+              <nonFilteredFileExtension>xls</nonFilteredFileExtension>
+              <nonFilteredFileExtension>xlsx</nonFilteredFileExtension>
+            </nonFilteredFileExtensions>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -125,6 +131,7 @@
           <version>${plugin.version.surefire}</version>
           <configuration>
             <!-- <argLine>${argLine} -Xms256m -Xmx1024m</argLine> -->
+            <argLine>${argLine} --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang.reflect=ALL-UNNAMED --add-opens java.base/java.text=ALL-UNNAMED --add-opens java.desktop/java.awt.font=ALL-UNNAMED</argLine>
             <skipTests>${skipUnitTests}</skipTests>
             <forkCount>1</forkCount>
             <reuseForks>false</reuseForks>
@@ -151,6 +158,7 @@
           <version>${plugin.version.failsafe}</version>
           <configuration>
             <!-- <argLine>${argLine} -Xms256m -Xmx1024m</argLine> -->
+            <argLine>${argLine} --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.lang.reflect=ALL-UNNAMED --add-opens java.base/java.text=ALL-UNNAMED --add-opens java.desktop/java.awt.font=ALL-UNNAMED --add-opens java.xml/com.sun.org.apache.xerces.internal.parsers=ALL-UNNAMED --add-opens java.xml/com.sun.org.apache.xerces.internal.util=ALL-UNNAMED</argLine>
             <skipTests>${skipIntegrationTests}</skipTests>
             <forkCount>1</forkCount>
             <reuseForks>false</reuseForks>
@@ -315,21 +323,14 @@
           <artifactId>jacoco-maven-plugin</artifactId>
           <version>${plugin.version.jacoco}</version>
           <executions>
-            <!-- offline instrumentation is used to measure coverage of unit tests -->
             <execution>
-              <id>default-instrument</id>
+              <id>prepare-unit-test-agent</id>
               <goals>
-                <goal>instrument</goal>
+                <goal>prepare-agent</goal>
               </goals>
             </execution>
             <execution>
-              <id>default-restore-instrumented-classes</id>
-              <goals>
-                <goal>restore-instrumented-classes</goal>
-              </goals>
-            </execution>
-            <execution>
-              <id>report</id>
+              <id>generate-unit-test-report</id>
               <phase>prepare-package</phase>
               <goals>
                 <goal>report</goal>

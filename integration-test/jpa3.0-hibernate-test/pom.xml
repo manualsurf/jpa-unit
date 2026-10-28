@@ -8,7 +8,7 @@
   </parent>
 
   <artifactId>jpa-unit-jpa3.0-hibernate-integration-test</artifactId>
-  <name>JPA Unit - JPA2.1 Hibernate Integration Tests</name>
+  <name>JPA Unit - JPA 3.0 Hibernate Integration Tests</name>
 
   <dependencies>
     <dependency>
@@ -34,7 +34,12 @@
     </dependency>
     <dependency>
       <groupId>org.hibernate</groupId>
-        <artifactId>hibernate-jcache</artifactId>
+      <artifactId>hibernate-jcache</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.ehcache</groupId>
+      <artifactId>ehcache</artifactId>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 </project>

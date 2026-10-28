@@ -8,7 +8,7 @@
   </parent>
 
   <artifactId>jpa-unit-jpa3.0-eclipselink-integration-test</artifactId>
-  <name>JPA Unit - JPA2.1 EclipseLink Integration Tests</name>
+  <name>JPA Unit - JPA 3.0 EclipseLink Integration Tests</name>
 
   <dependencies>
     <dependency>
@@ -29,9 +29,13 @@
       <scope>test</scope>
     </dependency>
     <dependency>
+      <groupId>jakarta.persistence</groupId>
+      <artifactId>jakarta.persistence-api</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>org.eclipse.persistence</groupId>
       <artifactId>eclipselink</artifactId>
-      <version>2.6.4</version>
     </dependency>
     <dependency>
       <groupId>jakarta.transaction</groupId>

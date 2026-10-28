@@ -39,13 +39,14 @@
     <version.liquibase>4.19.0</version.liquibase>
     <version.ehcache>2.10.9.2</version.ehcache>
     <version.ehcache3>3.10.8</version.ehcache3>
+    <version.javassist>3.29.2-GA</version.javassist>
     <version.cucumber>1.2.5</version.cucumber>
     <version.mongo-driver>3.5.0</version.mongo-driver>
     <version.flapdoodle.embed.mongo>2.0.0</version.flapdoodle.embed.mongo>
     <verions.concordion>2.1.1</verions.concordion>
     <verions.shrinkwrap>1.2.6</verions.shrinkwrap>
     <version.neo4j-jdbc-driver>3.1.0</version.neo4j-jdbc-driver>
-    <version.neo4j-cypher-dsl>2.3.1</version.neo4j-cypher-dsl>
+    <version.neo4j-cypher-dsl>2021.2.4</version.neo4j-cypher-dsl>
     <version.HikariCP>2.7.1</version.HikariCP>
     <version.jgrapht>1.0.1</version.jgrapht>
     <version.liquigraph>3.0.1</version.liquigraph>
@@ -57,7 +58,6 @@
     <version.junit-jupiter>5.10.2</version.junit-jupiter>
     <version.junit-vintage>5.10.2</version.junit-vintage>
     <version.junit-platform>1.10.2</version.junit-platform>
-    <version.jacoco>${plugin.version.jacoco}</version.jacoco>
   </properties>
 
   <build>
@@ -224,9 +224,24 @@
         <version>${version.hibernate6}</version>
       </dependency>
       <dependency>
+        <groupId>org.hibernate.common</groupId>
+        <artifactId>hibernate-commons-annotations</artifactId>
+        <version>6.0.1.Final</version>
+      </dependency>
+      <dependency>
         <groupId>org.ehcache</groupId>
         <artifactId>ehcache</artifactId>
         <version>${version.ehcache3}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.javassist</groupId>
+        <artifactId>javassist</artifactId>
+        <version>${version.javassist}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.glassfish.jaxb</groupId>
+        <artifactId>jaxb-runtime</artifactId>
+        <version>2.3.9</version>
       </dependency>
       <dependency>
         <groupId>junit</groupId>
@@ -267,11 +282,6 @@
         <groupId>org.junit.platform</groupId>
         <artifactId>junit-platform-suite-engine</artifactId>
         <version>${version.junit-platform}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jacoco</groupId>
-        <artifactId>org.jacoco.agent</artifactId>
-        <version>${version.jacoco}</version>
       </dependency>
       <dependency>
         <groupId>info.cukes</groupId>

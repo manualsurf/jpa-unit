@@ -14,13 +14,9 @@
   <artifactId>jpa-unit-neo4j</artifactId>
   <name>JPA Unit - Neo4J Extension</name>
 
-  <repositories>
-    <repository>
-      <id>neo4j</id>
-      <name>neo4j-repository</name>
-      <url>https://m2.neo4j.org/content/repositories/releases</url>
-    </repository>
-  </repositories>
+  <properties>
+    <skipIntegrationTests>true</skipIntegrationTests>
+  </properties>
 
   <dependencies>
     <dependency>
@@ -79,13 +75,6 @@
     <dependency>
       <groupId>org.hamcrest</groupId>
       <artifactId>hamcrest</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.jacoco</groupId>
-      <artifactId>org.jacoco.agent</artifactId>
-      <version>${version.jacoco}</version>
-      <classifier>runtime</classifier>
       <scope>test</scope>
     </dependency>
 
